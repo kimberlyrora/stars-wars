@@ -2,16 +2,19 @@
 --font:'Noto Sans HK', sans-serif;
 --sizetitle: 75px;
 --fontcolor: white;
+--padding: 10px 0px 15px 0px;
+--weightone: 700;
+--weighttwo: 100;
 }
 .title{
 	font-size: var(--sizetitle);
 }
 .one{
-	font-weight: 700;
+	font-weight: var(--weightone);
 	margin-top: 60px;
 }
 .two{
-	font-weight: 100;
+	font-weight: var(--weighttwo);
 }
 .card{
 display: inline-block;
@@ -32,6 +35,7 @@ input{
 	padding-left: 12px;
 	margin-top: 30px;
 	margin-bottom: 27px;
+	color: white;
 }
 .three{
 	font-weight: 400;
@@ -45,4 +49,19 @@ input{
 .line{
 	line-height: 0em;
 
+}
+.frame{
+	background: linear-gradient(to right, rgba(163,211,255,1) 0%, rgba(163,211,255,1) 3%, rgba(5,147,255,1) 100%);
+	margin-bottom: 30px;
+	padding: var(--padding)
+}
+.name{
+	padding: var(--padding);
+	margin-bottom: 0px;
+}
+.detail{
+border: 0;
+background-color: transparent;
+color: white;
+font-size: 10px;
 }

@@ -1,0 +1,25 @@
+.container{
+		font-family: var(--font);
+		color: var(--fontcolor);
+		margin-top: 80px;
+}
+.name-character{
+		font-weight: var(--weightone);
+}
+.general{
+		font-size: var(--sizetitle);
+}
+.hometown{
+		font-weight: var(--weighttwo);
+}
+.info{
+	font-weight: var(--weighttwo);
+	border: 1px solid rgb(179, 57, 63);
+	padding: 40px 40px 25px;
+	line-height: 0.7em;
+	margin-right:38em;
+}
+.back{
+	color: var(--fontcolor);
+	margin-top: 46px;
+}

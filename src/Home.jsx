@@ -21,18 +21,18 @@ const Home = () => {
 			<p className='row justify-content-center three'>RESULTADOS</p>
 			<p className='color-border' />
 			</div>
-			<div className='row common'>
+			<div className='row justify-content-around common'>
 			{datawars.filter(elem => {
 				if ((elem.name.toLowerCase()).includes(person.toLowerCase())) {
 					return elem.name
 				}}).map((character) => {
 				return (
-					<div key={character.created} className='col-4 common'>
-						<div>{character.name}</div>
-						<button>
+					<div key={character.created} className='col-3 offset-1 common frame'>
+						<div className='name'>{character.name}</div>
+						<button className='detail'>
 							<Link to = {{
 							pathname:'/Character', 
-							state: { profile: character}}}>VER DETALLE</Link>
+							state: { profile: character}}} className='detail'>VER DETALLE</Link>
 						</button>
 						</div>
 				)
