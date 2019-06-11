@@ -1,0 +1,31 @@
+$font:'Noto Sans HK', sans-serif;
+$sizetitle: 75px;
+$fontcolor: white;
+$padding: 10px 0px 15px 0px;
+$weightone: 700;
+$weighttwo: 100;
+.container{
+		font-family: $font;
+		color: $fontcolor;
+		margin-top: 80px;
+}
+.name-character{
+		font-weight: $weightone;
+}
+.general{
+		font-size: $sizetitle;
+}
+.hometown{
+		font-weight: $weighttwo;
+}
+.info{
+	font-weight: $weighttwo;
+	border: 1px solid rgb(179, 57, 63);
+	padding: 40px 40px 25px;
+	line-height: 0.7em;
+	margin-right:38em;
+}
+.back{
+	color: $fontcolor;
+	margin-top: 46px;
+}

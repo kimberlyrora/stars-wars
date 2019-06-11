@@ -1,25 +1,32 @@
-.container{
-		font-family: var(--font);
-		color: var(--fontcolor);
-		margin-top: 80px;
+.container {
+  font-family: "Noto Sans HK", sans-serif;
+  color: white;
+  margin-top: 80px;
 }
-.name-character{
-		font-weight: var(--weightone);
+
+.name-character {
+  font-weight: 700;
 }
-.general{
-		font-size: var(--sizetitle);
+
+.general {
+  font-size: 75px;
 }
-.hometown{
-		font-weight: var(--weighttwo);
+
+.hometown {
+  font-weight: 100;
 }
-.info{
-	font-weight: var(--weighttwo);
-	border: 1px solid rgb(179, 57, 63);
-	padding: 40px 40px 25px;
-	line-height: 0.7em;
-	margin-right:38em;
+
+.info {
+  font-weight: 100;
+  border: 1px solid #b3393f;
+  padding: 40px 40px 25px;
+  line-height: 0.7em;
+  margin-right: 38em;
 }
-.back{
-	color: var(--fontcolor);
-	margin-top: 46px;
+
+.back {
+  color: white;
+  margin-top: 46px;
 }
+
+/*# sourceMappingURL=Character.css.map */

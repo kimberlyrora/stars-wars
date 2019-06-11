@@ -1,0 +1,66 @@
+$font:'Noto Sans HK', sans-serif;
+$sizetitle: 75px;
+$fontcolor: white;
+$padding: 10px 0px 15px 0px;
+$weightone: 700;
+$weighttwo: 100;
+
+.title{
+	font-size: $sizetitle;
+}
+.one{
+	font-weight: $weightone;
+	margin-top: 60px;
+}
+.two{
+	font-weight:$weighttwo;
+}
+.card{
+display: inline-block;
+}
+.common{
+	color: $fontcolor;
+	font-family: $font;
+	text-align: center
+}
+.space{
+	line-height: 1.1em;
+}
+input{
+	width: 22em;
+	height: 2.3em;
+	border: 1px solid rgb(11, 72, 172);
+	background-color: black;
+	padding-left: 12px;
+	margin-top: 30px;
+	margin-bottom: 27px;
+	color: white;
+}
+.three{
+	font-weight: 400;
+}
+.color-border{
+	border: 3px solid rgb(179, 57, 63);
+	width: 40px;
+  margin-left: auto;
+	margin-right: auto; 
+}
+.line{
+	line-height: 0em;
+
+}
+.frame{
+	background: linear-gradient(to right, rgba(163,211,255,1) 0%, rgba(163,211,255,1) 3%, rgba(5,147,255,1) 100%);
+	margin-bottom: 30px;
+	padding: $padding
+}
+.name{
+	padding: $padding;
+	margin-bottom: 0px;
+}
+.detail{
+border: 0;
+background-color: transparent;
+color: white;
+font-size: 10px;
+}
