@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import  './Home.css'
 const Home = () => {
 	const [datawars, setData] = useState([]);
 	const [person, setPerson] = useState('');
@@ -10,27 +11,34 @@ const Home = () => {
 			.catch(e => console.log(e));
 	}, []);
 	return (
-		<>
-			<h1>STAR WARS</h1>
-			<h1>PERSONAJES</h1>
-			<input placeholder= 'BUSCAR' value={person} onChange={e => setPerson(e.target.value)}></input>
-			<h4>RESULTADOS</h4>
+		<div className='container'>
+			<div className='common title space'>
+			<p className='row justify-content-center one'>STAR WARS</p>
+			<p className='row justify-content-center two'>PERSONAJES</p>
+			</div>
+			<div className='common line'>
+			<input  placeholder= 'BUSCAR' value={person} onChange={e => setPerson(e.target.value)}></input>
+			<p className='row justify-content-center three'>RESULTADOS</p>
+			<p className='color-border' />
+			</div>
+			<div className='row common'>
 			{datawars.filter(elem => {
 				if ((elem.name.toLowerCase()).includes(person.toLowerCase())) {
 					return elem.name
 				}}).map((character) => {
 				return (
-					<div key={character.created}>
+					<div key={character.created} className='col-4 common'>
 						<div>{character.name}</div>
 						<button>
 							<Link to = {{
 							pathname:'/Character', 
 							state: { profile: character}}}>VER DETALLE</Link>
 						</button>
-					</div>
+						</div>
 				)
 			})}
-		</>
+			</div>
+		</div>
 	)
 }
 export default Home

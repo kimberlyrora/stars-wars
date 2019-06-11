@@ -1,0 +1,48 @@
+:root{
+--font:'Noto Sans HK', sans-serif;
+--sizetitle: 75px;
+--fontcolor: white;
+}
+.title{
+	font-size: var(--sizetitle);
+}
+.one{
+	font-weight: 700;
+	margin-top: 60px;
+}
+.two{
+	font-weight: 100;
+}
+.card{
+display: inline-block;
+}
+.common{
+	color: var(--fontcolor);
+	font-family: var(--font);
+	text-align: center
+}
+.space{
+	line-height: 1.1em;
+}
+input{
+	width: 22em;
+	height: 2.3em;
+	border: 1px solid rgb(11, 72, 172);
+	background-color: black;
+	padding-left: 12px;
+	margin-top: 30px;
+	margin-bottom: 27px;
+}
+.three{
+	font-weight: 400;
+}
+.color-border{
+	border: 3px solid rgb(179, 57, 63);
+	width: 40px;
+  margin-left: auto;
+	margin-right: auto; 
+}
+.line{
+	line-height: 0em;
+
+}
