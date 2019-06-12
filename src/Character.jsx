@@ -20,7 +20,7 @@ const Character = (prof) => {
 				<p className='year same'>Año de nacimiento: {prof.location.state.profile.birth_year}</p>
 				<p className='gender same'>Sexo: {prof.location.state.profile.gender}</p>
 			</div>
-			<div className='back'><Link to='/' className='back'>{`< VOLVER`}</Link></div>
+			<div className='back'><Link to='/stars-wars/' className='back'>{`< VOLVER`}</Link></div>
 		</div>
 	)
 }
