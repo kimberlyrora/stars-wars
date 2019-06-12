@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/stars-wars/static/css/main.84c495a8.chunk.css",
-    "main.js": "/stars-wars/static/js/main.84519dd9.chunk.js",
-    "main.js.map": "/stars-wars/static/js/main.84519dd9.chunk.js.map",
+    "main.js": "/stars-wars/static/js/main.b14a0f24.chunk.js",
+    "main.js.map": "/stars-wars/static/js/main.b14a0f24.chunk.js.map",
     "runtime~main.js": "/stars-wars/static/js/runtime~main.62a69b2b.js",
     "runtime~main.js.map": "/stars-wars/static/js/runtime~main.62a69b2b.js.map",
     "static/js/2.fd054270.chunk.js": "/stars-wars/static/js/2.fd054270.chunk.js",
     "static/js/2.fd054270.chunk.js.map": "/stars-wars/static/js/2.fd054270.chunk.js.map",
     "index.html": "/stars-wars/index.html",
-    "precache-manifest.25e23afc24e01f66b7371485fd0f32f5.js": "/stars-wars/precache-manifest.25e23afc24e01f66b7371485fd0f32f5.js",
+    "precache-manifest.44c556ea9407195541b163f2575ef3b2.js": "/stars-wars/precache-manifest.44c556ea9407195541b163f2575ef3b2.js",
     "service-worker.js": "/stars-wars/service-worker.js",
     "static/css/main.84c495a8.chunk.css.map": "/stars-wars/static/css/main.84c495a8.chunk.css.map"
   }
