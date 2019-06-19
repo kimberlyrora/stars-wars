@@ -11,7 +11,18 @@ const Home = () => {
 			.then(e => setData(e.data.results))
 			.catch(e => console.log(e));
 	}, []);
-	// console.log(datawars);
+console.log(datawars);
+
+// const playAudio = () => {
+// 	const nodeAudio = document.getElementById('prove');
+// nodeAudio.play();
+// };
+		// if(!node.current) return; //stop from running all together
+		// node.current.currentTime = 0;
+	//  node.current.play()
+		// .then(e=> console.log('1', ))
+		// .catch(i=>console.log('2',i));
+	// }
 	return (
 		<div className='container'>
 			<div className='common title space'>
@@ -24,19 +35,16 @@ const Home = () => {
 				<p className='color-border' />
 			</div>
 			<div className='row justify-content-around common'>
-				{datawars.filter(elem => {
-					if ((elem.name.toLowerCase()).includes(person.toLowerCase())) {
-						return elem.name
-					}
-				}).map((character) => {
+				{datawars
+				.filter(elem => elem.name.toLowerCase().includes(person.toLowerCase()))
+				.map((character) => {
 					return (
 						<div data-key={character.created} key={character.created} className='col-3 offset-1 common frame'>
 							<div className='name'>{character.name}</div>
 							<button className='detail'>
 								<Link to={{
 									pathname: '/Character',
-									state: { profile: character }
-								}} className='detail'>VER DETALLE</Link>
+									state: { profile: character, src: false}}} className='detail'>VER DETALLE</Link>
 							</button>
 						</div>
 					)
