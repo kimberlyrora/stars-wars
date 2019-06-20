@@ -11,12 +11,12 @@ const Home = () => {
 			.then(e => setData(e.data.results))
 			.catch(e => console.log(e));
 	}, []);
-const onSearch = (val) => {
-	setPerson(val);
-	axios.get('https://swapi.co/api/people/')
+	const onSearch = (val) => {
+		setPerson(val);
+		axios.get('https://swapi.co/api/people/')
 			.then(e => setData(e.data.results))
 			.catch(e => console.log(e));
-}
+	}	
 	return (
 		<div className='container'>
 			<div className='common title space'>
@@ -30,19 +30,22 @@ const onSearch = (val) => {
 			</div>
 			<div className='row justify-content-around common'>
 				{datawars
-				.filter(elem => elem.name.toLowerCase().includes(person.toLowerCase()))
-				.map((character) => {
-					return (
-						<div data-key={character.created} key={character.created} className='col-3 offset-1 common frame'>
-							<div className='name'>{character.name}</div>
-							<button className='detail'>
-								<Link to={{
-									pathname: '/Character',
-									state: { profile: character, src: false}}} className='detail'>VER DETALLE</Link>
-							</button>
-						</div>
-					)
-				})}
+					.filter(elem => elem.name.toLowerCase().includes(person.toLowerCase()))
+					.map(character => {
+						return (
+							<div data-key={character.created} key={character.created} className='col-3 offset-1 common frame'>
+								<div className='name'>{character.name}</div>
+								<button className='detail'>
+									<Link to={{
+										pathname: '/Character',
+										state: {
+											profile: character, src: false }
+									}} className='detail'>VER DETALLE</Link>
+								</button>
+							</div>
+						)
+					})
+				}
 			</div>
 		</div>
 	)

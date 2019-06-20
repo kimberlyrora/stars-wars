@@ -66,7 +66,6 @@ const Character = (prof) => {
 		if (!prof.location.state.src) {
 			const nodeAudio = refAudio.current;
 			nodeAudio.play();
-			console.log(nodeAudio);
 		} else {
 			console.log('bye');
 		}
