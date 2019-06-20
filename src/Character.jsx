@@ -62,26 +62,20 @@ const Character = (prof) => {
 			.then(e => setHometown(e.data.name))
 			.catch(e => console.log(e));
 	}, [prof.location.state.profile.homeworld]);
-	
-	const refAudio = useRef(prof.location.state.profile.created)
-	
 	useEffect(() => {
 		if (!prof.location.state.src) {
 			const nodeAudio = refAudio.current;
 			nodeAudio.play();
+			console.log(nodeAudio);
 		} else {
 			console.log('bye');
 		}
 	});
+	const refAudio = useRef(prof.location.state.profile.created)
 	const rightContent =
 	contents
 	.filter(elem => elem.created === prof.location.state.profile.created)
 	.map(e => e.src);
-
-		// if(content.created === prof.location.state.profile.created){
-		// return content.src;
-	// });
-
 	return (
 		<div className='container'>
 			<p className='name-character general'>{prof.location.state.profile.name}</p>
@@ -95,7 +89,6 @@ const Character = (prof) => {
 			<div className='back'><Link to='/stars-wars/' className='back'>{`< VOLVER`}</Link></div>
 			<audio data-key="83" id='prove' ref={refAudio} src={rightContent}></audio>
 		</div>
-
 	)
 }
 export default Character;

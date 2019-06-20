@@ -11,18 +11,12 @@ const Home = () => {
 			.then(e => setData(e.data.results))
 			.catch(e => console.log(e));
 	}, []);
-console.log(datawars);
-
-// const playAudio = () => {
-// 	const nodeAudio = document.getElementById('prove');
-// nodeAudio.play();
-// };
-		// if(!node.current) return; //stop from running all together
-		// node.current.currentTime = 0;
-	//  node.current.play()
-		// .then(e=> console.log('1', ))
-		// .catch(i=>console.log('2',i));
-	// }
+const onSearch = (val) => {
+	setPerson(val);
+	axios.get('https://swapi.co/api/people/')
+			.then(e => console.log(e.data.results))
+			.catch(e => console.log(e));
+}
 	return (
 		<div className='container'>
 			<div className='common title space'>
@@ -30,7 +24,7 @@ console.log(datawars);
 				<p className='row justify-content-center two'>PERSONAJES</p>
 			</div>
 			<div className='common line'>
-				<input placeholder='BUSCAR' value={person} onChange={e => setPerson(e.target.value)}></input>
+				<input placeholder='BUSCAR' value={person} onChange={e => onSearch(e.target.value)}></input>
 				<p className='row justify-content-center three'>RESULTADOS</p>
 				<p className='color-border' />
 			</div>
