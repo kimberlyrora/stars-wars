@@ -14,7 +14,7 @@ const Home = () => {
 const onSearch = (val) => {
 	setPerson(val);
 	axios.get('https://swapi.co/api/people/')
-			.then(e => console.log(e.data.results))
+			.then(e => setData(e.data.results))
 			.catch(e => console.log(e));
 }
 	return (
