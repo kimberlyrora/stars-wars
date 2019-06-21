@@ -56,19 +56,24 @@ const contents = [
 	}
 ];
 const Character = (prof) => {
-	const [hometown, setHometown] = useState([]);
-	useEffect(() => {
-		axios.get(prof.location.state.profile.homeworld)
+	const [hometown, setHometown] = useState('');
+	
+	const playing = () => {
+		if (!prof.location.state.src && hometown !=='') {
+			const nodeAudio = refAudio.current;
+			 nodeAudio.play()
+			 .then(e => console.log(e))
+			 .catch(el => console.log(el));
+		}
+	};
+	const axi = () => {
+		  axios.get(prof.location.state.profile.homeworld)
 			.then(e => setHometown(e.data.name))
 			.catch(e => console.log(e));
-	}, [prof.location.state.profile.homeworld]);
+	}
 	useEffect(() => {
-		if (!prof.location.state.src) {
-			const nodeAudio = refAudio.current;
-			nodeAudio.play();
-		} else {
-			console.log('bye');
-		}
+		axi();
+		playing();
 	});
 	const refAudio = useRef(prof.location.state.profile.created)
 	const rightContent =
